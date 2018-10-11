@@ -33,16 +33,16 @@ namespace ElectronicObserver.Window
 			ConfigurationChanged();
 
 
-			#region set cellstyle
+            #region set cellstyle
 
-			CSDefaultLeft = new DataGridViewCellStyle
+            QuestView.BackgroundColor = ColorTranslator.FromHtml("#2A2A2D");
+
+            CSDefaultLeft = new DataGridViewCellStyle
 			{
 				Alignment = DataGridViewContentAlignment.MiddleLeft
 			};
-			CSDefaultLeft.BackColor =
-			CSDefaultLeft.SelectionBackColor = SystemColors.Control;
-			CSDefaultLeft.ForeColor = SystemColors.ControlText;
-			CSDefaultLeft.SelectionForeColor = SystemColors.ControlText;
+            CSDefaultLeft.BackColor = CSDefaultLeft.SelectionBackColor = ColorTranslator.FromHtml("#2A2A2D");
+			CSDefaultLeft.ForeColor = CSDefaultLeft.SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0");
 			CSDefaultLeft.WrapMode = DataGridViewTriState.False;
 
 			CSDefaultCenter = new DataGridViewCellStyle(CSDefaultLeft)
@@ -50,7 +50,7 @@ namespace ElectronicObserver.Window
 				Alignment = DataGridViewContentAlignment.MiddleCenter
 			};
 
-			CSCategories = new DataGridViewCellStyle[9];
+            CSCategories = new DataGridViewCellStyle[9];
 			for (int i = 0; i < CSCategories.Length; i++)
 			{
 				CSCategories[i] = new DataGridViewCellStyle(CSDefaultCenter);
@@ -88,8 +88,7 @@ namespace ElectronicObserver.Window
 						break;
 				}
 
-				CSCategories[i].BackColor =
-				CSCategories[i].SelectionBackColor = c;
+				CSCategories[i].BackColor = CSCategories[i].SelectionBackColor = c;
 			}
 
 			QuestView.DefaultCellStyle = CSDefaultCenter;
@@ -97,11 +96,19 @@ namespace ElectronicObserver.Window
 			QuestView_Name.DefaultCellStyle = CSDefaultLeft;
 			QuestView_Progress.DefaultCellStyle = CSDefaultLeft;
 
-			#endregion
+
+            QuestView.ColumnHeadersDefaultCellStyle.BackColor = QuestView.ColumnHeadersDefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#2A2A2D");
+            QuestView.ColumnHeadersDefaultCellStyle.ForeColor = QuestView.ColumnHeadersDefaultCellStyle.SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0");
+            QuestView.EnableHeadersVisualStyles = false;
+
+            QuestView.GridColor = ColorTranslator.FromHtml("#444444");
+            #endregion
 
 
-			SystemEvents.SystemShuttingDown += SystemEvents_SystemShuttingDown;
-		}
+            SystemEvents.SystemShuttingDown += SystemEvents_SystemShuttingDown;
+
+           // visualStudioToolStripExtender1.SetStyle(MenuMain, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
+        }
 
 
 
@@ -754,7 +761,5 @@ namespace ElectronicObserver.Window
 		{
 			return "Quest";
 		}
-
-
 	}
 }

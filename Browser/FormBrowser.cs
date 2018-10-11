@@ -18,6 +18,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeifenLuo.WinFormsUI.Docking;
 
 namespace Browser
 {
@@ -165,7 +166,8 @@ namespace Browser
 				ToolMenu_Other_LastScreenShot.DropDownItems.Insert(0, host);
 			}
 
-		}
+            visualStudioToolStripExtender1.SetStyle(this.ToolMenu, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
+        }
 
 
 		private void FormBrowser_Load(object sender, EventArgs e)

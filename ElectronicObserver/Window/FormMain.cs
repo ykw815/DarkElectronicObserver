@@ -151,10 +151,15 @@ namespace ElectronicObserver.Window
 			APIObserver.Instance.Start(Utility.Configuration.Config.Connection.Port, this);
 
 
-			MainDockPanel.Extender.FloatWindowFactory = new CustomFloatWindowFactory();
+			MainDockPanel.Theme.Extender.FloatWindowFactory = new CustomFloatWindowFactory();
+
+            MainDockPanel.Theme = this.vS2015DarkTheme1;
+            visualStudioToolStripExtender1.SetStyle(StripMenu, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
+            visualStudioToolStripExtender1.SetStyle(StripStatus, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
 
 
-			SubForms = new List<DockContent>();
+
+            SubForms = new List<DockContent>();
 
 			//form init
 			//注：一度全てshowしないとイベントを受け取れないので注意	
@@ -183,9 +188,16 @@ namespace ElectronicObserver.Window
 
 			LoadLayout(Configuration.Config.Life.LayoutFilePath);
 
+            SubForms.ForEach(dockContent => PaintDark(dockContent));
+            SubForms.ForEach(dockContent => {
+                if (dockContent.MainMenuStrip != null)
+                {
+                    visualStudioToolStripExtender1.SetStyle(dockContent.MainMenuStrip, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
+                }
+            });
 
 
-			SoftwareInformation.CheckUpdate();
+            SoftwareInformation.CheckUpdate();
 
 			// デバッグ: 開始時にAPIリストを読み込む
 			if (Configuration.Config.Debug.LoadAPIListOnLoad)
@@ -224,8 +236,19 @@ namespace ElectronicObserver.Window
 
 		}
 
+        private void PaintDark(System.Windows.Forms.Control control)
+        {
+            control.BackColor = ColorTranslator.FromHtml("#2A2A2D");
+            control.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+            if (control.ContextMenuStrip != null)
+            {
+                visualStudioToolStripExtender1.SetStyle(control.ContextMenuStrip, VisualStudioToolStripExtender.VsVersion.Vs2015, vS2015DarkTheme1);
+            }
+            control.Controls.Cast<System.Windows.Forms.Control>().ToList().ForEach(c => PaintDark(c));
+        }
 
-		private void FormMain_Shown(object sender, EventArgs e)
+
+        private void FormMain_Shown(object sender, EventArgs e)
 		{
 			// Load で設定すると無視されるかバグる(タスクバーに出なくなる)のでここで設定
 			TopMost = Utility.Configuration.Config.Life.TopMost;
@@ -262,23 +285,23 @@ namespace ElectronicObserver.Window
 			Font = c.UI.MainFont;
 			//StripMenu.Font = Font;
 			StripStatus.Font = Font;
-			MainDockPanel.Skin.AutoHideStripSkin.TextFont = Font;
-			MainDockPanel.Skin.DockPaneStripSkin.TextFont = Font;
+			MainDockPanel.Theme.Skin.AutoHideStripSkin.TextFont = Font;
+			MainDockPanel.Theme.Skin.DockPaneStripSkin.TextFont = Font;
 
 
 			if (c.Life.LockLayout)
 			{
-				MainDockPanel.AllowChangeLayout = false;
+				//MainDockPanel.AllowChangeLayout = false;
 				FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			}
 			else
 			{
-				MainDockPanel.AllowChangeLayout = true;
+				//MainDockPanel.AllowChangeLayout = true;
 				FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
 			}
 
 			StripMenu_File_Layout_LockLayout.Checked = c.Life.LockLayout;
-			MainDockPanel.CanCloseFloatWindowInLock = c.Life.CanCloseFloatWindowInLock;
+			//MainDockPanel.CanCloseFloatWindowInLock = c.Life.CanCloseFloatWindowInLock;
 
 			StripMenu_File_Layout_TopMost.Checked = c.Life.TopMost;
 

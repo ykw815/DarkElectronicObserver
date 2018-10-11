@@ -340,7 +340,7 @@ namespace ElectronicObserver.Window
 
 		private void TableFleet_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
-			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+			e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 
 		}
 

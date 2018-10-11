@@ -952,12 +952,12 @@ namespace ElectronicObserver.Utility
 				{
 					ZoomRate = 1;
 					ZoomFit = false;
-					LogInPageURL = @"http://www.dmm.com/netgame_s/kancolle/";
-					IsEnabled = true;
+                    LogInPageURL = @"http://www.dmm.com/netgame_s/kancolle/";
+                    IsEnabled = true;
 					ScreenShotPath = "ScreenShot";
 					ScreenShotFormat = 2;
 					ScreenShotSaveMode = 1;
-					StyleSheet = "\r\nbody {\r\n	margin:0;\r\n	overflow:hidden\r\n}\r\n\r\n#game_frame {\r\n	position:fixed;\r\n	left:50%;\r\n	top:-16px;\r\n	margin-left:-450px;\r\n	z-index:1\r\n}\r\n";
+					StyleSheet = "\r\nbody {\r\n	margin:0;\r\n	overflow:hidden\r\n	background-color:#2A2A2D\r\n}\r\n\r\n#game_frame {\r\n	position:fixed;\r\n	left:50%;\r\n	top:-16px;\r\n	margin-left:-450px;\r\n	z-index:1\r\n	background-color:#2A2A2D\r\n}\r\n";
 					IsScrollable = false;
 					AppliesStyleSheet = true;
 					IsDMMreloadDialogDestroyable = false;
