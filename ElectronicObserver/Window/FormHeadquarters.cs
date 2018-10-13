@@ -126,12 +126,12 @@ namespace ElectronicObserver.Window
 			{
 				if (ShipCount.Tag as bool? ?? false)
 				{
-					ShipCount.BackColor = Color.LightCoral;
+					ShipCount.BackColor = ColorTranslator.FromHtml("#880000");
 				}
 
 				if (EquipmentCount.Tag as bool? ?? false)
 				{
-					EquipmentCount.BackColor = Color.LightCoral;
+					EquipmentCount.BackColor = ColorTranslator.FromHtml("#880000");
 				}
 			}
 
@@ -212,11 +212,11 @@ namespace ElectronicObserver.Window
 
 
 			// 資源上限超過時の色
-			Color overcolor = Color.Moccasin;
+			Color overcolor = ColorTranslator.FromHtml("#776445");
 
 
 
-			FlowPanelMaster.SuspendLayout();
+            FlowPanelMaster.SuspendLayout();
 
 			//Admiral
 			FlowPanelAdmiral.SuspendLayout();
@@ -299,7 +299,7 @@ namespace ElectronicObserver.Window
 				ShipCount.Text = string.Format("{0}/{1}", RealShipCount, db.Admiral.MaxShipCount);
 				if (RealShipCount > db.Admiral.MaxShipCount - 5)
 				{
-					ShipCount.BackColor = Color.LightCoral;
+					ShipCount.BackColor = ColorTranslator.FromHtml("#880000");
 				}
 				else
 				{
@@ -310,7 +310,7 @@ namespace ElectronicObserver.Window
 				EquipmentCount.Text = string.Format("{0}/{1}", RealEquipmentCount, db.Admiral.MaxEquipmentCount);
 				if (RealEquipmentCount > db.Admiral.MaxEquipmentCount + 3 - 20)
 				{
-					EquipmentCount.BackColor = Color.LightCoral;
+					EquipmentCount.BackColor = ColorTranslator.FromHtml("#880000");
 				}
 				else
 				{
@@ -431,12 +431,12 @@ namespace ElectronicObserver.Window
 			{
 				if (ShipCount.Tag as bool? ?? false)
 				{
-					ShipCount.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+					ShipCount.BackColor = DateTime.Now.Second % 2 == 0 ? ColorTranslator.FromHtml("#880000") : Color.Transparent;
 				}
 
 				if (EquipmentCount.Tag as bool? ?? false)
 				{
-					EquipmentCount.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+					EquipmentCount.BackColor = DateTime.Now.Second % 2 == 0 ? ColorTranslator.FromHtml("#880000") : Color.Transparent;
 				}
 			}
 		}

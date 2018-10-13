@@ -25,24 +25,24 @@ namespace ElectronicObserver.Window
 	{
 
 
-		/// <summary>タブ背景色(アクティブ)</summary>
-		private readonly Color TabActiveColor = Color.FromArgb(0xFF, 0xFF, 0xCC);
+        /// <summary>タブ背景色(アクティブ)</summary>
+        private readonly Color TabActiveColor = ColorTranslator.FromHtml("#006000");
 
-		/// <summary>タブ背景色(非アクティブ)</summary>
-		private readonly Color TabInactiveColor = SystemColors.Control;
+        /// <summary>タブ背景色(非アクティブ)</summary>
+        private readonly Color TabInactiveColor = ColorTranslator.FromHtml("#2A2A2D");
 
 
 
 		// セル背景色
-		private readonly Color CellColorRed = Color.FromArgb(0xFF, 0xBB, 0xBB);
-		private readonly Color CellColorOrange = Color.FromArgb(0xFF, 0xDD, 0xBB);
-		private readonly Color CellColorYellow = Color.FromArgb(0xFF, 0xFF, 0xBB);
-		private readonly Color CellColorGreen = Color.FromArgb(0xBB, 0xFF, 0xBB);
-		private readonly Color CellColorGray = Color.FromArgb(0xBB, 0xBB, 0xBB);
-		private readonly Color CellColorCherry = Color.FromArgb(0xFF, 0xDD, 0xDD);
+		private readonly Color CellColorRed = ColorTranslator.FromHtml("#660000");
+        private readonly Color CellColorOrange = ColorTranslator.FromHtml("#664422");
+        private readonly Color CellColorYellow = ColorTranslator.FromHtml("#665A22");
+        private readonly Color CellColorGreen = ColorTranslator.FromHtml("#226622");
+        private readonly Color CellColorGray = ColorTranslator.FromHtml("#777777");
+        private readonly Color CellColorCherry = ColorTranslator.FromHtml("#664444");
 
-		//セルスタイル
-		private DataGridViewCellStyle CSDefaultLeft, CSDefaultCenter, CSDefaultRight,
+        //セルスタイル
+        private DataGridViewCellStyle CSDefaultLeft, CSDefaultCenter, CSDefaultRight,
 			CSRedRight, CSOrangeRight, CSYellowRight, CSGreenRight, CSGrayRight, CSCherryRight,
 			CSIsLocked;
 
@@ -78,11 +78,11 @@ namespace ElectronicObserver.Window
 			CSDefaultLeft = new DataGridViewCellStyle
 			{
 				Alignment = DataGridViewContentAlignment.MiddleLeft,
-				BackColor = SystemColors.Control,
+				BackColor = ColorTranslator.FromHtml("#2A2A2D"),
 				Font = Font,
-				ForeColor = SystemColors.ControlText,
-				SelectionBackColor = Color.FromArgb(0xFF, 0xFF, 0xCC),
-				SelectionForeColor = SystemColors.ControlText,
+				ForeColor = ColorTranslator.FromHtml("#D0D0D0"),
+				SelectionBackColor = ColorTranslator.FromHtml("#006000"),
+				SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0"),
 				WrapMode = DataGridViewTriState.False
 			};
 

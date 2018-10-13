@@ -59,29 +59,29 @@ namespace ElectronicObserver.Window
 				switch (i + 1)
 				{
 					case 1:     //編成
-						c = Color.FromArgb(0xAA, 0xFF, 0xAA);
-						break;
+						c = ColorTranslator.FromHtml("#007700");
+                        break;
 					case 2:     //出撃
-						c = Color.FromArgb(0xFF, 0xCC, 0xCC);
-						break;
+                        c = ColorTranslator.FromHtml("#771111");
+                        break;
 					case 3:     //演習
-						c = Color.FromArgb(0xDD, 0xFF, 0xAA);
-						break;
+                        c = ColorTranslator.FromHtml("#486600");
+                        break;
 					case 4:     //遠征
-						c = Color.FromArgb(0xCC, 0xFF, 0xFF);
-						break;
+                        c = ColorTranslator.FromHtml("#336677");
+                        break;
 					case 5:     //補給/入渠
-						c = Color.FromArgb(0xFF, 0xFF, 0xCC);
-						break;
+                        c = ColorTranslator.FromHtml("#666600");
+                        break;
 					case 6:     //工廠
-						c = Color.FromArgb(0xDD, 0xCC, 0xBB);
-						break;
+                        c = ColorTranslator.FromHtml("#754730");
+                        break;
 					case 7:     //改装
-						c = Color.FromArgb(0xDD, 0xCC, 0xFF);
-						break;
+                        c = ColorTranslator.FromHtml("#482277");
+                        break;
 					case 8:     //出撃(2)
-						c = Color.FromArgb(0xFF, 0xCC, 0xCC);
-						break;
+                        c = ColorTranslator.FromHtml("#007700");
+                        break;
 					case 9:     //その他
 					default:
 						c = CSDefaultCenter.BackColor;

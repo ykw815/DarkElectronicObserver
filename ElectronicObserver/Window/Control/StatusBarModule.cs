@@ -268,7 +268,7 @@ namespace ElectronicObserver.Window.Control
 			}
 		}
 
-		private Color _barColorBackground = FromArgb(0xFF888888);
+		private Color _barColorBackground = FromArgb(0xFF373737);
 		/// <summary>
 		/// バーの背景色
 		/// </summary>

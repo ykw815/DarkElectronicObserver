@@ -536,11 +536,11 @@ namespace ElectronicObserver.Window
 					HP.Tag = (ship.RepairingDockID == -1 && 0.5 < ship.HPRate && ship.HPRate < 1.0) ? DateTimeHelper.FromAPITimeSpan(ship.RepairTime).TotalSeconds : 0.0;
 					if (isEscaped)
 					{
-						HP.BackColor = Color.Silver;
+						HP.BackColor = ColorTranslator.FromHtml("#333333");
 					}
 					else
 					{
-						HP.BackColor = SystemColors.Control;
+						HP.BackColor = ColorTranslator.FromHtml("#2A2A2D");
 					}
 					{
 						StringBuilder sb = new StringBuilder();
@@ -848,8 +848,8 @@ namespace ElectronicObserver.Window
 
 			ConfigurationChanged();
 
-			MainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
-			SubFontColor = Color.FromArgb(0x88, 0x88, 0x88);
+			MainFontColor = ColorTranslator.FromHtml("#D0D0D0");
+			SubFontColor = ColorTranslator.FromHtml("#DDDDDD");
 
 			AnchorageRepairBound = 0;
 
@@ -1347,7 +1347,7 @@ namespace ElectronicObserver.Window
 
 		private void TableMember_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
-			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+			e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
 

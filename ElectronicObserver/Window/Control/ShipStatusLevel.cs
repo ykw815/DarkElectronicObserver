@@ -231,9 +231,9 @@ namespace ElectronicObserver.Window.Control
 			_value = 0;
 			_maximumValue = 0;
 
-			_mainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
-			_subFontColor = Color.FromArgb(0x44, 0x44, 0x44);
-			_mainFont = new Font("Meiryo UI", 12, FontStyle.Regular, GraphicsUnit.Pixel);
+			_mainFontColor = ColorTranslator.FromHtml("#D0D0D0");
+            _subFontColor = ColorTranslator.FromHtml("#DDDDDD");
+            _mainFont = new Font("Meiryo UI", 12, FontStyle.Regular, GraphicsUnit.Pixel);
 			_subFont = new Font("Meiryo UI", 10, FontStyle.Regular, GraphicsUnit.Pixel);
 			_text = "Lv.";
 

@@ -141,7 +141,7 @@ namespace ElectronicObserver.Window
 
 					if (Utility.Configuration.Config.FormDock.BlinkAtCompletion && (time - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierRepair.AccelInterval)
 					{
-						RepairTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+						RepairTime.BackColor = DateTime.Now.Second % 2 == 0 ? ColorTranslator.FromHtml("#006000") : Color.Transparent;
 					}
 				}
 			}
@@ -241,7 +241,7 @@ namespace ElectronicObserver.Window
 
 		private void TableDock_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
-			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+			e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
 

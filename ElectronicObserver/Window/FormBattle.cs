@@ -23,7 +23,7 @@ namespace ElectronicObserver.Window
 	public partial class FormBattle : DockContent
 	{
 
-		private readonly Color WinRankColor_Win = SystemColors.ControlText;
+        private readonly Color WinRankColor_Win = ColorTranslator.FromHtml("#D0D0D0");
 		private readonly Color WinRankColor_Lose = Color.Red;
 
 		private readonly Size DefaultBarSize = new Size(80, 20);
@@ -381,8 +381,8 @@ namespace ElectronicObserver.Window
 			if (bm.Compass != null && bm.Compass.EventID == 5)
 				FleetEnemy.ForeColor = Color.Red;
 			else
-				FleetEnemy.ForeColor = SystemColors.ControlText;
-		}
+				FleetEnemy.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+        }
 
 		/// <summary>
 		/// 索敵結果を設定します。
@@ -536,8 +536,8 @@ namespace ElectronicObserver.Window
 		void ClearAircraftLabel(ImageLabel label)
 		{
 			label.Text = "-";
-			label.ForeColor = SystemColors.ControlText;
-			label.ImageAlign = ContentAlignment.MiddleCenter;
+			label.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+            label.ImageAlign = ContentAlignment.MiddleCenter;
 			label.ImageIndex = -1;
 			ToolTipInfo.SetToolTip(label, null);
 		}
@@ -582,9 +582,9 @@ namespace ElectronicObserver.Window
 				if (phasesEnabled.Any(p => p.GetAircraftTotal(stage, isFriend) > 0 && p.GetAircraftLost(stage, isFriend) == p.GetAircraftTotal(stage, isFriend)))
 					label.ForeColor = Color.Red;
 				else
-					label.ForeColor = SystemColors.ControlText;
+					label.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
 
-				label.ImageAlign = ContentAlignment.MiddleCenter;
+                label.ImageAlign = ContentAlignment.MiddleCenter;
 				label.ImageIndex = -1;
 			}
 
@@ -717,8 +717,8 @@ namespace ElectronicObserver.Window
 				HPBars[index].Value = resultHP;
 				HPBars[index].PrevValue = initialHP;
 				HPBars[index].MaximumValue = maxHP;
-				HPBars[index].BackColor = SystemColors.Control;
-				HPBars[index].Visible = true;
+				HPBars[index].BackColor = ColorTranslator.FromHtml("#2A2A2D");
+                HPBars[index].Visible = true;
 			}
 
 			void DisableHPBar(int index)
@@ -772,9 +772,9 @@ namespace ElectronicObserver.Window
 						bd.GetBattleDetail(refindex)
 						));
 
-					if (isEscaped) bar.BackColor = Color.Silver;
-					else bar.BackColor = SystemColors.Control;
-				}
+					if (isEscaped) bar.BackColor = ColorTranslator.FromHtml("#333333");
+                    else bar.BackColor = ColorTranslator.FromHtml("#2A2A2D");
+                }
 				else
 				{
 					DisableHPBar(refindex);
@@ -847,9 +847,9 @@ namespace ElectronicObserver.Window
 							bd.GetBattleDetail(refindex)
 							));
 
-						if (isEscaped) bar.BackColor = Color.Silver;
-						else bar.BackColor = SystemColors.Control;
-					}
+						if (isEscaped) bar.BackColor = ColorTranslator.FromHtml("#333333");
+                        else bar.BackColor = ColorTranslator.FromHtml("#2A2A2D");
+                    }
 					else
 					{
 						DisableHPBar(refindex);
@@ -994,18 +994,18 @@ namespace ElectronicObserver.Window
 
 
 			if (bd.Initial.IsBossDamaged)
-				HPBars[BattleIndex.EnemyMain1].BackColor = Color.MistyRose;
+				HPBars[BattleIndex.EnemyMain1].BackColor = ColorTranslator.FromHtml("#660000");
 
-			if (!isBaseAirRaid)
+            if (!isBaseAirRaid)
 			{
 				foreach (int i in bd.MVPShipIndexes)
-					HPBars[BattleIndex.Get(BattleSides.FriendMain, i)].BackColor = Color.Moccasin;
+					HPBars[BattleIndex.Get(BattleSides.FriendMain, i)].BackColor = ColorTranslator.FromHtml("#776445");
 
-				if (isFriendCombined)
+                if (isFriendCombined)
 				{
 					foreach (int i in bd.MVPShipCombinedIndexes)
-						HPBars[BattleIndex.Get(BattleSides.FriendEscort, i)].BackColor = Color.Moccasin;
-				}
+						HPBars[BattleIndex.Get(BattleSides.FriendEscort, i)].BackColor = ColorTranslator.FromHtml("#776445");
+                }
 			}
 
 			foreach (var bar in HPBars)
@@ -1087,8 +1087,8 @@ namespace ElectronicObserver.Window
 					ShipData ship = fleet.MembersInstance[index];
 
 					AirStage1Friend.Text = "#" + (index + (pd.IsFriendEscort ? 6 : 0) + 1);
-					AirStage1Friend.ForeColor = SystemColors.ControlText;
-					AirStage1Friend.ImageAlign = ContentAlignment.MiddleLeft;
+					AirStage1Friend.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+                    AirStage1Friend.ImageAlign = ContentAlignment.MiddleLeft;
 					AirStage1Friend.ImageIndex = (int)ResourceManager.EquipmentContent.Searchlight;
 					ToolTipInfo.SetToolTip(AirStage1Friend, "探照灯照射: " + ship.NameWithLevel);
 				}
@@ -1104,8 +1104,8 @@ namespace ElectronicObserver.Window
 				if (index != -1)
 				{
 					AirStage1Enemy.Text = "#" + (index + (pd.IsEnemyEscort ? 6 : 0) + 1);
-					AirStage1Enemy.ForeColor = SystemColors.ControlText;
-					AirStage1Enemy.ImageAlign = ContentAlignment.MiddleLeft;
+					AirStage1Enemy.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+                    AirStage1Enemy.ImageAlign = ContentAlignment.MiddleLeft;
 					AirStage1Enemy.ImageIndex = (int)ResourceManager.EquipmentContent.Searchlight;
 					ToolTipInfo.SetToolTip(AirStage1Enemy, "探照灯照射: " + pd.SearchlightEnemyInstance.NameWithClass);
 				}
@@ -1148,8 +1148,8 @@ namespace ElectronicObserver.Window
 				if (index != -1)
 				{
 					AirStage2Friend.Text = "#" + (index + 1);
-					AirStage2Friend.ForeColor = SystemColors.ControlText;
-					AirStage2Friend.ImageAlign = ContentAlignment.MiddleLeft;
+					AirStage2Friend.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+                    AirStage2Friend.ImageAlign = ContentAlignment.MiddleLeft;
 					AirStage2Friend.ImageIndex = (int)ResourceManager.EquipmentContent.Flare;
 					ToolTipInfo.SetToolTip(AirStage2Friend, "照明弾投射: " + pd.FlareFriendInstance.NameWithLevel);
 
@@ -1166,8 +1166,8 @@ namespace ElectronicObserver.Window
 				if (index != -1)
 				{
 					AirStage2Enemy.Text = "#" + (index + 1);
-					AirStage2Enemy.ForeColor = SystemColors.ControlText;
-					AirStage2Enemy.ImageAlign = ContentAlignment.MiddleLeft;
+					AirStage2Enemy.ForeColor = ColorTranslator.FromHtml("#D0D0D0");
+                    AirStage2Enemy.ImageAlign = ContentAlignment.MiddleLeft;
 					AirStage2Enemy.ImageIndex = (int)ResourceManager.EquipmentContent.Flare;
 					ToolTipInfo.SetToolTip(AirStage2Enemy, "照明弾投射: " + pd.FlareEnemyInstance.NameWithClass);
 				}
@@ -1211,28 +1211,28 @@ namespace ElectronicObserver.Window
 			for (int i = 0; i < friend.Members.Count; i++)
 			{
 				if (friend.EscapedShipList.Contains(friend.Members[i]))
-					HPBars[i].BackColor = Color.Silver;
+					HPBars[i].BackColor = ColorTranslator.FromHtml("#333333");
 
-				else if (br.MVPIndex == i + 1)
-					HPBars[i].BackColor = Color.Moccasin;
+                else if (br.MVPIndex == i + 1)
+					HPBars[i].BackColor = ColorTranslator.FromHtml("#776445");
 
-				else
-					HPBars[i].BackColor = SystemColors.Control;
-			}
+                else
+					HPBars[i].BackColor = ColorTranslator.FromHtml("#2A2A2D");
+            }
 
 			if (escort != null)
 			{
 				for (int i = 0; i < escort.Members.Count; i++)
 				{
 					if (escort.EscapedShipList.Contains(escort.Members[i]))
-						HPBars[i + 6].BackColor = Color.Silver;
+						HPBars[i + 6].BackColor = ColorTranslator.FromHtml("#333333");
 
-					else if (br.MVPIndexCombined == i + 1)
-						HPBars[i + 6].BackColor = Color.Moccasin;
+                    else if (br.MVPIndexCombined == i + 1)
+						HPBars[i + 6].BackColor = ColorTranslator.FromHtml("#776445");
 
-					else
-						HPBars[i + 6].BackColor = SystemColors.Control;
-				}
+                    else
+						HPBars[i + 6].BackColor = ColorTranslator.FromHtml("#2A2A2D");
+                }
 			}
 
 			/*// debug
@@ -1358,13 +1358,13 @@ namespace ElectronicObserver.Window
 		private void TableTop_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
 			if (e.Row == 1 || e.Row == 3)
-				e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+				e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
 		private void TableBottom_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
 			if (e.Row == 8)
-				e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+				e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
 

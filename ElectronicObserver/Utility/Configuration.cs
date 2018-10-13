@@ -197,7 +197,7 @@ namespace ElectronicObserver.Utility
 						SerializableColor.UIntToColor( 0xFF0044CC ),
 						SerializableColor.UIntToColor( 0xFF44FF00 ),
 						SerializableColor.UIntToColor( 0xFF882222 ),
-						SerializableColor.UIntToColor( 0xFF888888 ),
+						SerializableColor.UIntToColor( 0xFFCCCCCC ),
 					},
 					/*/// recognize
 					new List<SerializableColor>() {

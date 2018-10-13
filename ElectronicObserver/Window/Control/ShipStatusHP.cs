@@ -377,13 +377,13 @@ namespace ElectronicObserver.Window.Control
 			_maximumDigit = 999;
 
 			_mainFont = new Font("Meiryo UI", 12, FontStyle.Regular, GraphicsUnit.Pixel);
-			_mainFontColor = FromArgb(0xFF000000);
+			_mainFontColor = ColorTranslator.FromHtml("#D0D0D0");
 
-			_subFont = new Font("Meiryo UI", 10, FontStyle.Regular, GraphicsUnit.Pixel);
-			_subFontColor = FromArgb(0xFF888888);
+            _subFont = new Font("Meiryo UI", 10, FontStyle.Regular, GraphicsUnit.Pixel);
+			_subFontColor = ColorTranslator.FromHtml("#DDDDDD");
 
-			_repairFontColor = FromArgb(0xFF000088);
-			_text = "HP:";
+            _repairFontColor = ColorTranslator.FromHtml("#DDDDDD");
+            _text = "HP:";
 
 			_HPBar.UsePrevValue = true;
 			_showDifference = false;

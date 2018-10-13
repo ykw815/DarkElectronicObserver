@@ -151,14 +151,14 @@ namespace ElectronicObserver.Window
 
 					if (Utility.Configuration.Config.FormArsenal.BlinkAtCompletion && (time - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierConstruction.AccelInterval)
 					{
-						CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+						CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? ColorTranslator.FromHtml("#006000") : Color.Transparent;
 					}
 
 				}
 				else if (Utility.Configuration.Config.FormArsenal.BlinkAtCompletion && !string.IsNullOrWhiteSpace(CompletionTime.Text))
 				{
 					//完成しているので
-					CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+					CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? ColorTranslator.FromHtml("#006000") : Color.Transparent;
 				}
 			}
 
@@ -325,7 +325,7 @@ namespace ElectronicObserver.Window
 
 		private void TableArsenal_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
 		{
-			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
+			e.Graphics.DrawLine(Pens.DimGray, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
 
