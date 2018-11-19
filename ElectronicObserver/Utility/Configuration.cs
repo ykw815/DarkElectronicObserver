@@ -188,16 +188,16 @@ namespace ElectronicObserver.Utility
 					new List<SerializableColor>() {
 						SerializableColor.UIntToColor( 0xFFFF0000 ),
 						SerializableColor.UIntToColor( 0xFFFF0000 ),
-						SerializableColor.UIntToColor( 0xFFFF8800 ),
-						SerializableColor.UIntToColor( 0xFFFF8800 ),
-						SerializableColor.UIntToColor( 0xFFFFCC00 ),
-						SerializableColor.UIntToColor( 0xFFFFCC00 ),
+						SerializableColor.UIntToColor( 0xFFFFBB00 ),
+						SerializableColor.UIntToColor( 0xFFFFBB00 ),
+						SerializableColor.UIntToColor( 0xFFFFEE00 ),
+						SerializableColor.UIntToColor( 0xFFFFEE00 ),
 						SerializableColor.UIntToColor( 0xFF00CC00 ),
 						SerializableColor.UIntToColor( 0xFF00CC00 ),
 						SerializableColor.UIntToColor( 0xFF0044CC ),
 						SerializableColor.UIntToColor( 0xFF44FF00 ),
 						SerializableColor.UIntToColor( 0xFF882222 ),
-						SerializableColor.UIntToColor( 0xFFCCCCCC ),
+						SerializableColor.UIntToColor( 0xFF555555 ),
 					},
 					/*/// recognize
 					new List<SerializableColor>() {
@@ -227,7 +227,7 @@ namespace ElectronicObserver.Utility
 						SerializableColor.UIntToColor( 0xFF0044CC ),
 						SerializableColor.UIntToColor( 0xFF00FF44 ),
 						SerializableColor.UIntToColor( 0xFF882222 ),
-						SerializableColor.UIntToColor( 0xFF888888 ),
+						SerializableColor.UIntToColor( 0xFF555555 ),
 					},
 					//*/
 				};

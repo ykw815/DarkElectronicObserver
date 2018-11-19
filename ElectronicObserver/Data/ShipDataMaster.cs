@@ -662,8 +662,8 @@ namespace ElectronicObserver.Data
 
 			if (!IsAbyssalShip)
 			{
-				return SystemColors.ControlText;
-			}
+				return ColorTranslator.FromHtml("#D0D0D0");
+            }
 
 			bool isLateModel = Name.Contains("後期型");
 			bool isRemodeled = Name.Contains("改");

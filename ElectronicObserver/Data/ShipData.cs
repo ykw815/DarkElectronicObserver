@@ -778,17 +778,24 @@ namespace ElectronicObserver.Data
 		/// </summary>
 		public int TorpedoPower { get; private set; }
 
-		/// <summary>
-		/// 夜戦威力
-		/// </summary>
-		public int NightBattlePower { get; private set; }
+        /// <summary>
+        /// 夜戦威力
+        /// </summary>
+        public int NightBattlePower { get; private set; }
 
 
+        public bool isWithoutAnySameLocked
+        {
+            get
+            {
+                return !KCDatabase.Instance.Ships.Any(s => s.Value.ShipID == this.ShipID && s.Value.IsLocked);
+            }
+        }
 
-		/// <summary>
-		/// 装備改修補正(砲撃戦)
-		/// </summary>
-		private double GetDayBattleEquipmentLevelBonus()
+        /// <summary>
+        /// 装備改修補正(砲撃戦)
+        /// </summary>
+        private double GetDayBattleEquipmentLevelBonus()
 		{
 
 			double basepower = 0;

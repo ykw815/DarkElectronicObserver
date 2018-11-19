@@ -80,7 +80,7 @@ namespace ElectronicObserver.Window
                         c = ColorTranslator.FromHtml("#482277");
                         break;
 					case 8:     //出撃(2)
-                        c = ColorTranslator.FromHtml("#007700");
+                        c = ColorTranslator.FromHtml("#771111");
                         break;
 					case 9:     //その他
 					default:

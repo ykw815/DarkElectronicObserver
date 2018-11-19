@@ -145,7 +145,8 @@ namespace ElectronicObserver.Data.ShipGroup
 			{ ".MasterShip.AlbumNo", "図鑑番号" },
 			{ ".MasterShip.NameReading", "艦名読み" },
 			{ ".MasterShip.RemodelBeforeShipID", "改装前艦船ID" },
-			{ ".MasterShip.RemodelAfterShipID", "改装後艦船ID" },
+            { ".MasterShip.RemodelAfterShipID", "改装後艦船ID" },
+            { ".isWithoutAnySameLocked", "同種艦全部未鎖" },
 			//マスターのパラメータ系もおそらく意味がないので省略		
 		};
 
@@ -154,12 +155,12 @@ namespace ElectronicObserver.Data.ShipGroup
 
 		[IgnoreDataMember]
 		public static readonly Dictionary<ExpressionOperator, string> OperatorNameTable = new Dictionary<ExpressionOperator, string>() {
-			{ ExpressionOperator.Equal, "と等しい" },
-			{ ExpressionOperator.NotEqual, "と等しくない" },
-			{ ExpressionOperator.LessThan, "より小さい" },
-			{ ExpressionOperator.LessEqual, "以下" },
-			{ ExpressionOperator.GreaterThan, "より大きい" },
-			{ ExpressionOperator.GreaterEqual, "以上" },
+			{ ExpressionOperator.Equal, "==" },
+			{ ExpressionOperator.NotEqual, "!=" },
+			{ ExpressionOperator.LessThan, "<" },
+			{ ExpressionOperator.LessEqual, "<=" },
+			{ ExpressionOperator.GreaterThan, ">" },
+			{ ExpressionOperator.GreaterEqual, ">=" },
 			{ ExpressionOperator.Contains, "を含む" },
 			{ ExpressionOperator.NotContains, "を含まない" },
 			{ ExpressionOperator.BeginWith, "から始まる" },
