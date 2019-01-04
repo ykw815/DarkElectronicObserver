@@ -719,15 +719,15 @@ namespace ElectronicObserver.Utility
 				[IgnoreDataMember]
 				private readonly List<SerializableColor> DefaultSallyAreaColorScheme = new List<SerializableColor>()
 				{
-					SerializableColor.UIntToColor(0xfff0f0f0),
-					SerializableColor.UIntToColor(0xffffdddd),
-					SerializableColor.UIntToColor(0xffddffdd),
-					SerializableColor.UIntToColor(0xffddddff),
-					SerializableColor.UIntToColor(0xffffffcc),
-					SerializableColor.UIntToColor(0xffccffff),
-					SerializableColor.UIntToColor(0xffffccff),
-					SerializableColor.UIntToColor(0xffffffff),
-				};
+                    ColorTranslator.FromHtml("#2A2A2D"),
+                    ColorTranslator.FromHtml("#553333"),
+                    ColorTranslator.FromHtml("#335533"),
+                    ColorTranslator.FromHtml("#333366"),
+                    ColorTranslator.FromHtml("#555533"),
+                    ColorTranslator.FromHtml("#336666"),
+                    ColorTranslator.FromHtml("#553366"),
+                    ColorTranslator.FromHtml("#666666")
+                };
 
 				public ConfigFormFleet()
 				{

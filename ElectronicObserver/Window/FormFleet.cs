@@ -487,8 +487,8 @@ namespace ElectronicObserver.Window
 						}
 						else
 						{
-							Name.BackColor = SystemColors.Control;
-						}
+							Name.BackColor = ColorTranslator.FromHtml("#2A2A2D");
+                        }
 					}
 
 					Level.Value = ship.Level;
