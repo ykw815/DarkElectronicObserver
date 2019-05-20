@@ -497,7 +497,8 @@
             this.StripMenu_Tool_AntiAirDefense,
             this.StripMenu_Tool_FleetImageGenerator,
             this.StripMenu_Tool_BaseAirCorpsSimulation,
-            this.StripMenu_Tool_ExpChecker});
+            this.StripMenu_Tool_ExpChecker,
+            this.StripMenu_Tool_ExpeditionCheck});
             this.StripMenu_Tool.Name = "StripMenu_Tool";
             this.StripMenu_Tool.Size = new System.Drawing.Size(63, 20);
             this.StripMenu_Tool.Text = "ツール(&T)";

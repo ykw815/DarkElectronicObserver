@@ -35,6 +35,10 @@
             this.AdmiralComment = new System.Windows.Forms.Label();
             this.HQLevel = new ElectronicObserver.Window.Control.ShipStatusLevel();
             this.FlowPanelFleet = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanelUseItem = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanelResource = new System.Windows.Forms.FlowLayoutPanel();
+            this.ToolTipInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.HQLevel = new ElectronicObserver.Window.Control.ShipStatusLevel();
             this.ShipCount = new ElectronicObserver.Window.Control.ImageLabel();
             this.EquipmentCount = new ElectronicObserver.Window.Control.ImageLabel();
             this.FlowPanelUseItem = new System.Windows.Forms.FlowLayoutPanel();
@@ -107,6 +111,53 @@
             this.AdmiralComment.Text = "(提督コメント)";
             this.AdmiralComment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AdmiralComment.UseMnemonic = false;
+            // 
+            // FlowPanelFleet
+            // 
+            this.FlowPanelFleet.AutoSize = true;
+            this.FlowPanelFleet.Controls.Add(this.ShipCount);
+            this.FlowPanelFleet.Controls.Add(this.EquipmentCount);
+            this.FlowPanelFleet.Location = new System.Drawing.Point(0, 20);
+            this.FlowPanelFleet.Margin = new System.Windows.Forms.Padding(0);
+            this.FlowPanelFleet.Name = "FlowPanelFleet";
+            this.FlowPanelFleet.Size = new System.Drawing.Size(144, 20);
+            this.FlowPanelFleet.TabIndex = 1;
+            // 
+            // FlowPanelUseItem
+            // 
+            this.FlowPanelUseItem.AutoSize = true;
+            this.FlowPanelUseItem.Controls.Add(this.InstantRepair);
+            this.FlowPanelUseItem.Controls.Add(this.InstantConstruction);
+            this.FlowPanelUseItem.Controls.Add(this.DevelopmentMaterial);
+            this.FlowPanelUseItem.Controls.Add(this.ModdingMaterial);
+            this.FlowPanelUseItem.Controls.Add(this.FurnitureCoin);
+            this.FlowPanelUseItem.Controls.Add(this.DisplayUseItem);
+            this.FlowPanelUseItem.Location = new System.Drawing.Point(0, 40);
+            this.FlowPanelUseItem.Margin = new System.Windows.Forms.Padding(0);
+            this.FlowPanelUseItem.Name = "FlowPanelUseItem";
+            this.FlowPanelUseItem.Size = new System.Drawing.Size(300, 40);
+            this.FlowPanelUseItem.TabIndex = 2;
+            // 
+            // FlowPanelResource
+            // 
+            this.FlowPanelResource.AutoSize = true;
+            this.FlowPanelResource.Controls.Add(this.Fuel);
+            this.FlowPanelResource.Controls.Add(this.Ammo);
+            this.FlowPanelResource.Controls.Add(this.Steel);
+            this.FlowPanelResource.Controls.Add(this.Bauxite);
+            this.FlowPanelResource.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlowPanelResource.Location = new System.Drawing.Point(0, 80);
+            this.FlowPanelResource.Margin = new System.Windows.Forms.Padding(0);
+            this.FlowPanelResource.Name = "FlowPanelResource";
+            this.FlowPanelResource.Size = new System.Drawing.Size(60, 80);
+            this.FlowPanelResource.TabIndex = 5;
+            // 
+            // ToolTipInfo
+            // 
+            this.ToolTipInfo.AutoPopDelay = 30000;
+            this.ToolTipInfo.InitialDelay = 500;
+            this.ToolTipInfo.ReshowDelay = 100;
+            this.ToolTipInfo.ShowAlways = true;
             // 
             // HQLevel
             // 
@@ -220,6 +271,7 @@
             // 
             // DisplayUseItem
             // 
+            this.DisplayUseItem.Cursor = System.Windows.Forms.Cursors.Help;
             this.DisplayUseItem.Location = new System.Drawing.Point(3, 20);
             this.DisplayUseItem.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.DisplayUseItem.Name = "DisplayUseItem";
