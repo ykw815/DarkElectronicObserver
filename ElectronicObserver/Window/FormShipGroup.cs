@@ -82,7 +82,7 @@ namespace ElectronicObserver.Window
                 Font = Font,
                 ForeColor = ColorTranslator.FromHtml("#D0D0D0"),
                 SelectionBackColor = ColorTranslator.FromHtml("#006000"),
-                SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0"),SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0"),
+                SelectionForeColor = ColorTranslator.FromHtml("#D0D0D0"),
                 WrapMode = DataGridViewTriState.False
             };
 

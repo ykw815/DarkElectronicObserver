@@ -108,6 +108,7 @@
             this.StripStatus_Clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.UIUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.MainDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.StripMenu_Tool_ExpeditionCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.vS2015DarkTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme();
             this.visualStudioToolStripExtender1 = new WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender(this.components);
             this.StripMenu.SuspendLayout();
@@ -735,6 +736,11 @@
             // visualStudioToolStripExtender1
             // 
             this.visualStudioToolStripExtender1.DefaultRenderer = null;
+            // StripMenu_Tool_ExpeditionCheck 
+            this.StripMenu_Tool_ExpeditionCheck.Name = "StripMenu_Tool_ExpeditionCheck";
+            this.StripMenu_Tool_ExpeditionCheck.Size = new System.Drawing.Size(180, 22);
+            this.StripMenu_Tool_ExpeditionCheck.Text = "遠征可否チェック(&M)";
+            this.StripMenu_Tool_ExpeditionCheck.Click += new System.EventHandler(this.StripMenu_Tool_ExpeditionCheck_Click);
             // 
             // FormMain
             // 
@@ -842,6 +848,7 @@
 		private System.Windows.Forms.ToolStripMenuItem StripMenu_File_Notification;
 		private System.Windows.Forms.ToolStripMenuItem StripMenu_File_Notification_MuteAll;
 		private System.Windows.Forms.ToolStripMenuItem StripMenu_Tool_ExpChecker;
+        private System.Windows.Forms.ToolStripMenuItem StripMenu_Tool_ExpeditionCheck;
         private WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme vS2015DarkTheme1;
         private WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender visualStudioToolStripExtender1;
     }
