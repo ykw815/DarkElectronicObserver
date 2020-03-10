@@ -33,7 +33,6 @@
             this.FlowPanelAdmiral = new System.Windows.Forms.FlowLayoutPanel();
             this.AdmiralName = new System.Windows.Forms.Label();
             this.AdmiralComment = new System.Windows.Forms.Label();
-            this.HQLevel = new ElectronicObserver.Window.Control.ShipStatusLevel();
             this.FlowPanelFleet = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanelUseItem = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanelResource = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,19 +40,16 @@
             this.HQLevel = new ElectronicObserver.Window.Control.ShipStatusLevel();
             this.ShipCount = new ElectronicObserver.Window.Control.ImageLabel();
             this.EquipmentCount = new ElectronicObserver.Window.Control.ImageLabel();
-            this.FlowPanelUseItem = new System.Windows.Forms.FlowLayoutPanel();
             this.InstantRepair = new ElectronicObserver.Window.Control.ImageLabel();
             this.InstantConstruction = new ElectronicObserver.Window.Control.ImageLabel();
             this.DevelopmentMaterial = new ElectronicObserver.Window.Control.ImageLabel();
             this.ModdingMaterial = new ElectronicObserver.Window.Control.ImageLabel();
             this.FurnitureCoin = new ElectronicObserver.Window.Control.ImageLabel();
             this.DisplayUseItem = new ElectronicObserver.Window.Control.ImageLabel();
-            this.FlowPanelResource = new System.Windows.Forms.FlowLayoutPanel();
             this.Fuel = new ElectronicObserver.Window.Control.ImageLabel();
             this.Ammo = new ElectronicObserver.Window.Control.ImageLabel();
             this.Steel = new ElectronicObserver.Window.Control.ImageLabel();
             this.Bauxite = new ElectronicObserver.Window.Control.ImageLabel();
-            this.ToolTipInfo = new System.Windows.Forms.ToolTip(this.components);
             this.FlowPanelMaster.SuspendLayout();
             this.FlowPanelAdmiral.SuspendLayout();
             this.FlowPanelFleet.SuspendLayout();
@@ -279,10 +275,11 @@
             this.DisplayUseItem.Size = new System.Drawing.Size(52, 20);
             this.DisplayUseItem.TabIndex = 6;
             this.DisplayUseItem.Text = "(任意)";
-            // 
-            // FlowPanelResource
-            // 
-            this.FlowPanelResource.AutoSize = true;
+			this.DisplayUseItem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DisplayUseItem_MouseClick);
+			// 
+			// FlowPanelResource
+			// 
+			this.FlowPanelResource.AutoSize = true;
             this.FlowPanelResource.Controls.Add(this.Fuel);
             this.FlowPanelResource.Controls.Add(this.Ammo);
             this.FlowPanelResource.Controls.Add(this.Steel);

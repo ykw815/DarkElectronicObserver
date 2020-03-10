@@ -87,6 +87,7 @@
             this.ToolMenu_Other_Alignment_Left = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMenu_Other_Alignment_Right = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMenu_Other_Alignment_Invisible = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolMenu_Other_ClearCache = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMenu_Other_OpenDevTool = new System.Windows.Forms.ToolStripMenuItem();
             this.vS2015DarkTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme();
             this.visualStudioToolStripExtender1 = new WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender(this.components);
@@ -224,6 +225,7 @@
             this.ToolMenu_Other_RefreshIgnoreCache,
             this.ToolMenu_Other_NavigateToLogInPage,
             this.ToolMenu_Other_Navigate,
+            this.ToolMenu_Other_ClearCache,
             this.toolStripSeparator5,
             this.ToolMenu_Other_AppliesStyleSheet,
             this.toolStripSeparator6,
@@ -548,6 +550,13 @@
             this.ToolMenu_Other_Alignment_Invisible.Text = "非表示(&I)";
             this.ToolMenu_Other_Alignment_Invisible.Click += new System.EventHandler(this.ToolMenu_Other_Alignment_Invisible_Click);
             // 
+            // ToolMenu_Other_ClearCache
+            // 
+            this.ToolMenu_Other_ClearCache.Name = "ToolMenu_Other_ClearCache";
+            this.ToolMenu_Other_ClearCache.Size = new System.Drawing.Size(262, 22);
+            this.ToolMenu_Other_ClearCache.Text = "キャッシュを削除(&H)";
+            this.ToolMenu_Other_ClearCache.Click += new System.EventHandler(this.ToolMenu_Other_ClearCache_Click);
+            // 
             // ToolMenu_Other_OpenDevTool
             // 
             this.ToolMenu_Other_OpenDevTool.Name = "ToolMenu_Other_OpenDevTool";
@@ -640,7 +649,8 @@
 		private System.Windows.Forms.ToolStripMenuItem ToolMenu_Other_OpenDevTool;
 		private System.Windows.Forms.ToolStripMenuItem ToolMenu_Other_Zoom_Classic;
 		private System.Windows.Forms.ToolStripMenuItem ToolMenu_Other_RefreshIgnoreCache;
-        private WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme vS2015DarkTheme1;
+		private System.Windows.Forms.ToolStripMenuItem ToolMenu_Other_ClearCache;
+		private WeifenLuo.WinFormsUI.Docking.VS2015DarkTheme vS2015DarkTheme1;
         private WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender visualStudioToolStripExtender1;
     }
 }
